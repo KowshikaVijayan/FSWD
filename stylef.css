@@ -1,0 +1,130 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #444;
+    line-height: 1.6;
+    scroll-behavior: smooth; }
+
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    color: #afeeee !important; 
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc0cb !important; 
+}
+
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: #1c52f3;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #00796b;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0f2f1;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Section styles */
+section {
+    padding: 60px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    color: #444;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Specific section styles */
+#about {
+    background-color: #e0f2f1;
+}
+
+#projects {
+    background-color: #f9f9f9;
+}
+
+#skills {
+    background-color: #e8f5e9;
+}
+
+#contact {
+    background-color: #f9f9f9;
+}
+
+/* Footer styles */
+footer {
+    background-color: #00796b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Social links */
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    color: #c1c1c1;
+    text-decoration: underline;
+}
+
+/* Active link highlighting */
+.navbar-nav .nav-link.active {
+    font-weight: 700;
+    color: #c1c1c1 !important;
+}
