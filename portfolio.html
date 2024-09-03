@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe4e1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    color: #f5fffa;
+    font-size: 40px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000080;
+    z-index: 1000;
+    padding: 70px;
+    box-sizing: border-box;
+}
+
+.content {
+    margin-top: 80px; /* Add margin to push content below the fixed heading */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Adjust height to fit the viewport minus the heading */
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 15px 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #e0ffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color:#dda0dd ;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #008080;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #008080;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+    background-color: #008b8b;
+    border-color: #008b8b;
+}
+
+.button:active {
+    background-color: #5f9ea0;
+    border-color: #5f9ea0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>FULL STACK WEB DEVELOPMENT LAB EXPERIMENTS</h1>
+        <ul>
+            <button class="button" onclick="portfolio()"><li><a href="#" alt="portfolio">Portfolio</a></li></button></ul><br>
+            <button class="button" onclick="todo()"><li><a href="#" alt="todo">To-do List</a></li></button>
+        </ul>
+    </div>
+<script>
+    function portfolio(){
+        location.replace("https://github.com/KowshikaVijayan/FSWD/blob/ex1/indexf.html");
+    }
+    function todo(){
+        location.replace("https://github.com/KowshikaVijayan/FSWD/blob/ex2/index.html");
+    }
+</script>
+</body>
+</html>
+
+
+<!--<head>
+<title>My Page</title>
+<style>
+h1{
+ text-align:center;
+ color:red;
+ font-size:60px;
+}
+</style>
+</head>
+<body>
+<h1>welcome to my page</h1></br>  
+<ul>
+<li><a href="https://www.google.com" alt="googlenav">Google</a></li>
+</br>
+<li><a href="https://github.com/KowshikaVijayan/FSWD/blob/ex1/indexf.html" alt="portfolio">Portfolio</a></li>
+</br>
+<li><a href="https://github.com/KowshikaVijayan/FSWD/blob/ex2/index.html" alt="todo">To-do List</a></li>
+</ul>
+</body>-->
