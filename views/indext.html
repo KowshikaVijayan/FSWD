@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Microblog</title>
+</head>
+<body>
+    <h1>Welcome to Microblog!</h1>
+    <form action="/posts/create" method="POST">
+        <input type="text" name="content" placeholder="What's happening?" maxlength="280" required>
+        <button type="submit">Post</button>
+    </form>
+    <h2>Feed</h2>
+    <ul id="feed"></ul>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
