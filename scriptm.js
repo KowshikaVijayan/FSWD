@@ -1,4 +1,5 @@
-let currentUser = null;
+
+   let currentUser = null;
 
 // Load posts from localStorage
 function loadPosts() {
@@ -41,7 +42,7 @@ document.getElementById('post-btn').addEventListener('click', () => {
 // Create a post
 function createPost(content, likes = 0, dislikes = 0, comments = []) {
     const postContainer = document.getElementById('posts-container');
-    
+   
     const postDiv = document.createElement('div');
     postDiv.className = 'post';
 
@@ -70,7 +71,7 @@ function createPost(content, likes = 0, dislikes = 0, comments = []) {
 
     reactionsDiv.appendChild(likeButton);
     reactionsDiv.appendChild(dislikeButton);
-    
+   
     const commentSection = document.createElement('div');
     commentSection.className = 'comments';
     const commentCount = document.createElement('p');
@@ -99,9 +100,17 @@ function createPost(content, likes = 0, dislikes = 0, comments = []) {
         }
     });
 
+    // Load existing comments
+    comments.forEach(commentText => {
+        const comment = document.createElement('p');
+        comment.className = 'comment';
+        comment.innerHTML = `👤 ${currentUser}: ${commentText}`;
+        commentSection.appendChild(comment);
+    });
+
     commentSection.appendChild(commentInput);
     commentSection.appendChild(commentButton);
-    
+   
     postDiv.appendChild(reactionsDiv);
     postDiv.appendChild(commentSection);
     postContainer.prepend(postDiv);
