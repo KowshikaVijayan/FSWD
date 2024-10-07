@@ -1,4 +1,5 @@
 let currentUser = null;
+let selectedPost = null; // Variable to keep track of the selected post
 
 // Load posts from localStorage
 function loadPosts() {
@@ -44,6 +45,16 @@ function createPost(content, likes = 0, dislikes = 0, comments = [], author) {
     const postDiv = document.createElement('div');
     postDiv.className = 'post';
 
+    postDiv.tabIndex = 0; // Make the post focusable
+    postDiv.addEventListener('focus', () => {
+        selectedPost = postDiv; // Set the selected post when focused
+    });
+    postDiv.addEventListener('blur', () => {
+        if (selectedPost === postDiv) {
+            selectedPost = null; // Clear selection if focus is lost
+        }
+    });
+
     const postText = document.createElement('p');
     postText.innerText = content;
     postDiv.appendChild(postText);
@@ -52,16 +63,6 @@ function createPost(content, likes = 0, dislikes = 0, comments = [], author) {
     const authorText = document.createElement('small');
     authorText.innerText = `Posted by: ${author}`;
     postDiv.appendChild(authorText);
-
-    // Create delete button
-    const deleteButton = document.createElement('button');
-    deleteButton.innerHTML = '🗑️'; // Trash emoji
-    deleteButton.addEventListener('click', () => {
-        postDiv.remove(); // Remove post from the DOM
-        updateLocalStorage(); // Update local storage
-        updatePostCount(); // Update post count
-    });
-    postDiv.appendChild(deleteButton);
 
     const reactionsDiv = document.createElement('div');
     reactionsDiv.className = 'reactions';
@@ -104,7 +105,6 @@ function createPost(content, likes = 0, dislikes = 0, comments = [], author) {
         if (commentText) {
             const comment = document.createElement('p');
             comment.className = 'comment';
-            // Add a user emoji before the comment text
             comment.innerHTML = `👤 ${commentText}`; // Show emoji with the comment text
             commentSection.appendChild(comment);
             comments.push(commentText);
@@ -118,7 +118,6 @@ function createPost(content, likes = 0, dislikes = 0, comments = [], author) {
     comments.forEach(commentText => {
         const comment = document.createElement('p');
         comment.className = 'comment';
-        // Add a user emoji before the comment text
         comment.innerHTML = `👤 ${commentText}`; // Show emoji with the comment text
         commentSection.appendChild(comment);
     });
@@ -133,26 +132,12 @@ function createPost(content, likes = 0, dislikes = 0, comments = [], author) {
     updateLocalStorage();
 }
 
-// Update local storage
-function updateLocalStorage() {
-    const posts = [];
-    const postElements = document.querySelectorAll('.post');
-
-    postElements.forEach(postElement => {
-        const content = postElement.querySelector('p').innerText;
-        const likes = postElement.querySelector('.like-count').innerText;
-        const dislikes = postElement.querySelector('.dislike-count').innerText;
-        const comments = Array.from(postElement.querySelectorAll('.comments .comment')).map(comment => comment.innerText);
-        const author = postElement.querySelector('small').innerText.replace('Posted by: ', ''); // Extract author name
-
-        posts.push({ content, likes: parseInt(likes), dislikes: parseInt(dislikes), comments, author });
-    });
-
-    localStorage.setItem('posts', JSON.stringify(posts));
-}
-
-// Update post count
-function updatePostCount() {
-    const postCount = document.querySelectorAll('.post').length;
-    document.getElementById('count').innerText = postCount;
-}
+// Listen for the delete key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Delete' && selectedPost) {
+        selectedPost.remove(); // Remove post from the DOM
+        updateLocalStorage(); // Update local storage
+        updatePostCount(); // Update post count
+        selectedPost = null; // Clear selection after deletion
+    }
+});
