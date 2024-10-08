@@ -141,3 +141,28 @@ document.addEventListener('keydown', (event) => {
         selectedPost = null; // Clear selection after deletion
     }
 });
+
+// Update local storage
+function updateLocalStorage() {
+    const posts = [];
+    const postElements = document.querySelectorAll('.post');
+
+    postElements.forEach(postElement => {
+        const content = postElement.querySelector('p').innerText;
+        const likes = postElement.querySelector('.like-count').innerText;
+        const dislikes = postElement.querySelector('.dislike-count').innerText;
+        const comments = Array.from(postElement.querySelectorAll('.comments .comment')).map(comment => comment.innerText);
+        const author = postElement.querySelector('small').innerText.replace('Posted by: ', ''); // Extract author name
+
+        posts.push({ content, likes: parseInt(likes), dislikes: parseInt(dislikes), comments, author });
+    });
+
+    localStorage.setItem('posts', JSON.stringify(posts));
+}
+
+// Update post count
+function updatePostCount() {
+    const postCount = document.querySelectorAll('.post').length;
+    document.getElementById('count').innerText = postCount;
+}
+
