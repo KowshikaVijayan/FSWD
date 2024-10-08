@@ -2,7 +2,7 @@ const restaurants = [
     {
         name: "Italian Bistro",
         description: "Authentic Italian cuisine with a modern twist.",
-        image: "italian bistro.jpg",
+        image: "https://thumbs.dreamstime.com/z/venice-italy-november-bistrot-de-venise-traditional-romantic-outdoor-dining-italian-bistro-restaurant-setting-bistrot-de-venise-146935484.jpg",
         rating: 4.5,
         menu: [
             { name: "Pasta", price: 12, type: "Veg", description: "Creamy Alfredo pasta.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo-8-efyGKCbx0LO9V80U4kdjtZdARaC62_Q&s", reviews: [] },
