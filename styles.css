@@ -1,66 +1,95 @@
-html,
-body{
-   margin: 0;
-   font-family: 'Poppins', sans-serif;
-   background-color:#f5e8ba;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#wrapper h2{
-    display:flex;
-    justify-content: center;
-    
+header {
+    background: #ff5722;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-h2{
-    color:#ffeba7;
-    letter-spacing: 1px;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
-input{
-    border-radius: 5px;
-    border: 2px solid black ;
-    margin-top:30px;
-    height:2.5em;
-    width:250px;
-    padding-left:10px;
+.hidden {
+    display: none;
 }
 
-input:active{
-    border:none;
+.restaurant, .menu-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
 }
-#wrapper{
-    height:500px;
-    width:400px;
-    margin:200px auto;
-    background-color:#1f2029;
-    border-radius:10px;
-    padding:30px;
+.restaurant-image {
+    width: 25%;
+    height: 175px;
+    max-height: 200px; /* Set a maximum height for uniformity */
+}
+#menu-items, #cart-items {
+    list-style-type: none;
+    padding: 0;
 }
 
-button{
-    margin-top:20px;
-    background-color:#ffeba7;
-    border-radius: 4px;
-    height: 44px;
-    font-weight: 600;
-    padding: 0 30px;
-    letter-spacing: 1px;
+button {
+    margin-top: 10px;
+}
+
+.menu-item img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+#payment input {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #f1f1f1;
+}
+main {
+    padding: 20px;
+}
+.reviews {
+    margin-top: 10px;
+}
+
+.review-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.review-input {
+    margin: 5px 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.submit-review {
+    background-color: #ff5722;
+    color: white;
     border: none;
-    color: #102770;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover{
-    cursor:pointer;
+.submit-review:hover {
+    background-color: #e64a19;
 }
-#todoList{
-    color:white;
-    font-size:28px;  
-    margin-top:10px; 
-}
-
-#todoList p{
-  margin:10px 0px;
-}
-
-#todoList p:hover{
-  cursor: pointer;
+h2 {
+  text-align:center;
+  text-shadow: 2px 2px 5px red;
 }
