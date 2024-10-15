@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background: #ff5722;
+    background: #191970;
     color: white;
     padding: 10px;
     text-align: center;
@@ -95,7 +95,7 @@ main {
 }
 
 .submit-review:hover {
-    background-color: #e64a19;
+    background-color: #808000;
 }
 
 h2 {
