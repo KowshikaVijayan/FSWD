@@ -42,8 +42,9 @@ nav ul li {
 }
 
 .restaurant-image {
-    width: 100%;
-    height: 175px;
+    width: auto; /* Retain original width */
+    height: 175px; /* Fixed height */
+    max-height: 200px; /* Set a maximum height for uniformity */
     border-radius: 12px; /* More rounded corners */
 }
 
@@ -69,8 +70,8 @@ button:hover {
 }
 
 .menu-item img {
-    width: 100px;
-    height: auto;
+    width: auto; /* Retain original width */
+    height: auto; /* Retain original height */
     display: block;
     margin: 10px 0;
     border-radius: 8px; /* Rounded corners */
