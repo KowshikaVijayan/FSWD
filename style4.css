@@ -1,14 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9; /* Light background for contrast */
 }
 
 header {
-    background: #B0E0E6;
-    color: mistyrose;
-    padding: 10px;
+    background: #4A90E2; /* Sky blue */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -18,7 +20,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .hidden {
@@ -26,15 +28,22 @@ nav ul li {
 }
 
 .restaurant, .menu-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    margin: 15px;
+    background-color: #ffffff; /* White background for cards */
+    transition: box-shadow 0.3s ease;
+}
+
+.restaurant:hover, .menu-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
 }
 
 .restaurant-image {
-    width: 25%;
+    width: 100%;
     height: 175px;
-    max-height: 200px; /* Set a maximum height for uniformity */
+    border-radius: 8px; /* Rounded corners */
 }
 
 #menu-items, #cart-items {
@@ -44,6 +53,17 @@ nav ul li {
 
 button {
     margin-top: 10px;
+    background-color: #FF5722; /* Vibrant orange */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E64A19; /* Darker shade on hover */
 }
 
 .menu-item img {
@@ -51,6 +71,7 @@ button {
     height: auto;
     display: block;
     margin: 10px 0;
+    border-radius: 5px; /* Rounded corners */
 }
 
 #payment input {
@@ -58,12 +79,15 @@ button {
     padding: 10px;
     width: 100%;
     max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #f1f1f1;
+    padding: 20px 0;
+    background: #4A90E2; /* Match header color */
+    color: white;
 }
 
 main {
@@ -83,22 +107,27 @@ main {
     margin: 5px 0;
     padding: 5px;
     width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .submit-review {
-    background-color: #ff5722;
+    background-color: #FF5722; /* Vibrant orange */
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .submit-review:hover {
-    background-color: #808000;
+    background-color: #E64A19; /* Darker shade on hover */
 }
 
 h2 {
     text-align: center;
-    text-shadow: 2px 2px 5px red;
+    text-shadow: 2px 2px 5px rgba(255, 87, 34, 0.7); /* Slightly darker shadow for depth */
+    color: #4A90E2; /* Header color */
 }
+
