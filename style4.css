@@ -2,15 +2,15 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Light background for contrast */
+    background-color: #f9f9f9; /* Soft background color */
 }
 
 header {
-    background: #4A90E2; /* Sky blue */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient header */
     color: #ffffff; /* White text for contrast */
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -29,21 +29,22 @@ nav ul li {
 
 .restaurant, .menu-item {
     border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 12px; /* More rounded corners */
     padding: 15px;
     margin: 15px;
     background-color: #ffffff; /* White background for cards */
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .restaurant:hover, .menu-item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 .restaurant-image {
     width: 100%;
     height: 175px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 12px; /* More rounded corners */
 }
 
 #menu-items, #cart-items {
@@ -53,17 +54,18 @@ nav ul li {
 
 button {
     margin-top: 10px;
-    background-color: #FF5722; /* Vibrant orange */
+    background-color: #ff6f61; /* Coral color */
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 8px; /* Rounded corners */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #E64A19; /* Darker shade on hover */
+    background-color: #ff4f3e; /* Darker coral on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
 }
 
 .menu-item img {
@@ -71,7 +73,7 @@ button:hover {
     height: auto;
     display: block;
     margin: 10px 0;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 8px; /* Rounded corners */
 }
 
 #payment input {
@@ -80,13 +82,13 @@ button:hover {
     width: 100%;
     max-width: 300px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #4A90E2; /* Match header color */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Match header gradient */
     color: white;
 }
 
@@ -108,26 +110,26 @@ main {
     padding: 5px;
     width: 100%;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .submit-review {
-    background-color: #FF5722; /* Vibrant orange */
+    background-color: #ff6f61; /* Coral color */
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit-review:hover {
-    background-color: #E64A19; /* Darker shade on hover */
+    background-color: #ff4f3e; /* Darker coral on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
 }
 
 h2 {
     text-align: center;
-    text-shadow: 2px 2px 5px rgba(255, 87, 34, 0.7); /* Slightly darker shadow for depth */
-    color: #4A90E2; /* Header color */
+    text-shadow: 2px 2px 5px rgba(255, 87, 34, 0.5); /* Soft shadow for depth */
+    color: #ff6f61; /* Coral color */
 }
-
