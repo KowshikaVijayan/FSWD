@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classifieds - Buy and Sell</title>
+  <link rel="stylesheet" href="style5.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-store"></i> Classifieds - Buy and Sell Used Products</h1>
+    <nav>
+      <button onclick="showSection('home')"><i class="fas fa-home"></i> Home</button>
+      <button onclick="showSection('cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+      <button onclick="showSection('profile')"><i class="fas fa-user"></i> Profile</button>
+    </nav>
+    <input type="text" id="search" placeholder="Search for products..." oninput="filterProducts()">
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home-section">
+      <h2><i class="fas fa-box-open"></i> Available Products</h2>
+      <div id="product-list"></div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart-section" style="display: none;">
+      <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+      <div id="cart-list">
+        <p><i class="fas fa-info-circle"></i> No items in the cart.</p>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile-section" style="display: none;">
+      <h2><i class="fas fa-user"></i> User Profile</h2>
+      <p><strong>Name:</strong> Kowshi</p>
+      <p><strong>Email:</strong> Kowshi@gmail.com</p>
+
+      <h2><i class="fas fa-plus"></i> Add a New Product</h2>
+      <form id="product-form" onsubmit="addProduct(event)">
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" required>
+
+        <label for="product-price">Price:</label>
+        <input type="number" id="product-price" required>
+
+        <label for="product-description">Description:</label>
+        <textarea id="product-description" required></textarea>
+
+        <label for="product-image">Image URL:</label>
+        <input type="text" id="product-image" placeholder="Enter image URL" required>
+
+        <button type="submit"><i class="fas fa-plus-circle"></i> Add Product</button>
+      </form>
+    </section>
+
+    <!-- Place Order Modal -->
+    <div id="order-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeOrderModal()">&times;</span>
+        <h2><i class="fas fa-clipboard-check"></i> Place Order</h2>
+        <p id="order-product-details"></p>
+
+        <label for="shipping-address">Shipping Address:</label>
+        <input type="text" id="shipping-address" placeholder="Enter your address">
+
+        <label for="contact-number">Contact Number:</label>
+        <input type="text" id="contact-number" placeholder="Enter your contact number">
+
+        <button onclick="placeOrder()"><i class="fas fa-check-circle"></i> Place Order</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app5.js"></script>
+</body>
+</html>
